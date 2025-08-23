@@ -9,7 +9,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                &mo Num5       &kp UP    &mo Num0
+                &mo 3       &kp UP    &mo 2
                 &kp LEFT   &kp DOWN   &kp RIGHT
             >;
         };
@@ -24,17 +24,17 @@
 
         num0_layer {
             display-name = "Num0";
-            bindings = >
-                &kp 0       &kp 1   &mo Num0
-                &kp 2       &kp 3   &kp4 
+            bindings = <
+                &kp N0       &kp N1   &mo 2
+                &kp N2       &kp N3   &kp N4 
             >;               
         };
 
         num5_layer {
             display-name = "Num5";
-            bindings = >
-                &mo Num5    &kp 5   &kp 6
-                &kp 7       &kp 8   &kp 9 
+            bindings = <
+                &mo 3    &kp N5   &kp N6
+                &kp N7   &kp N8   &kp N9 
             >;               
         };        
     };
@@ -54,7 +54,7 @@
         combo_F {
             timeout-ms = <50>;
             key-positions = <0 2>;
-            bindings = <&kp SPACE>;
+            bindings = <&kp F>;
         };           
         combo_Space {
             timeout-ms = <50>;
@@ -74,7 +74,7 @@
          combo_bt_layer {
             timeout-ms = <50>;
             key-positions = <0 1 5>;
-            bindings = <&tog bt_layer>;
+            bindings = <&tog 1>;
         };                 
     };
 };
