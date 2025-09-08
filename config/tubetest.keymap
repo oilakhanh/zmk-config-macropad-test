@@ -75,6 +75,11 @@
             timeout-ms = <50>;
             key-positions = <0 1 5>;
             bindings = <&tog 1>;
-        };                 
+        };
+         combo_soft_off {
+            timeout-ms = <50>;
+            key-positions = <1 2 3>;
+            bindings = <&soft_off>;
+        };   
     };
 };
