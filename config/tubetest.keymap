@@ -38,6 +38,30 @@
             >;               
         };   
 
+        MOUSE1 {
+            display-name = "Num5";
+            bindings = <
+                &msc -20 0  &mmv 0 -20  &msc 20 0
+                &mmv -20 0  &mmv 0 20   &mmv 20 0 
+            >;               
+        };  
+
+        MOUSE2 {
+            display-name = "Num5";
+            bindings = <
+                &msc -50 0  &mmv 0 -50  &msc 50 0
+                &mmv -50 0  &mmv 0 50   &mmv 50 0 
+            >;               
+        }; 
+
+        MOUSE3 {
+            display-name = "Num5";
+            bindings = <
+                &msc -150 0  &mmv 0 -150  &msc 150 0
+                &mmv -150 0  &mmv 0 150   &mmv 150 0 
+            >;               
+        }; 
+
         MEDIA {
             display-name = "Media";
             bindings = <
@@ -100,10 +124,20 @@
             key-positions = <0 1 5>;
             bindings = <&tog 1>;
         };
-        combo_MEDIA {
+        combo_MOUSE1 {
+            timeout-ms = <50>;
+            key-positions = <0 1 2>;
+            bindings = <&tog 4>;
+        };
+        combo_MOUSE2 {
             timeout-ms = <50>;
             key-positions = <3 4 5>;
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
+        };
+        combo_MOUSE3 {
+            timeout-ms = <50>;
+            key-positions = <3 1 5>;
+            bindings = <&tog 6>;
         };
     };
     behaviors {
