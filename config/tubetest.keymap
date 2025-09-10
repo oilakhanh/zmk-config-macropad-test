@@ -9,7 +9,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                &mo 3       &kp UP    &mo 2
+                &ht_0 3 N5       &kp UP    &ht_0 2 N0
                 &kp LEFT   &kp DOWN   &kp RIGHT
             >;
         };
@@ -25,7 +25,7 @@
         num0_layer {
             display-name = "Num0";
             bindings = <
-                &kp N0       &kp N1   &mo 2
+                &kp N0       &kp N1   &trans
                 &kp N2       &kp N3   &kp N4 
             >;               
         };
@@ -33,10 +33,18 @@
         num5_layer {
             display-name = "Num5";
             bindings = <
-                &mo 3    &kp N5   &kp N6
+                &trans   &kp N5   &kp N6
                 &kp N7   &kp N8   &kp N9 
             >;               
-        };        
+        };   
+
+        MEDIA {
+            display-name = "Media";
+            bindings = <
+                &trans  &C_BRI_DN   &C_BRI_UP
+                &C_MUTE &C_VOL_DN   &C_VOL_UP 
+            >;               
+        };   
     };
 
     combos {
@@ -61,35 +69,52 @@
             key-positions = <3 5>;
             bindings = <&kp SPACE>;
         };
-         combo_shift_comma {
+        combo_shift_comma {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp LS(COMMA)>;
         };   
-         combo_shift_dot {
+        combo_shift_dot {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp LS(DOT)>;
         };
-         combo_bt_layer {
-            timeout-ms = <50>;
-            key-positions = <0 1 5>;
-            bindings = <&tog 1>;
-        };
-         combo_C {
+        combo_C {
             timeout-ms = <50>;
             key-positions = <1 4>;
             bindings = <&kp C>;
         };   
-         combo_ctl_left {
+        combo_ctl_left {
             timeout-ms = <50>;
             key-positions = <0 3>;
             bindings = <&kp LC(LEFT)>;
         };   
-         combo_ctl_right {
+        combo_ctl_right {
             timeout-ms = <50>;
             key-positions = <2 5>;
             bindings = <&kp LC(RIGHT)>;
-        };   
+        }; 
+
+        combo_bt_layer {
+            timeout-ms = <50>;
+            key-positions = <0 1 5>;
+            bindings = <&tog 1>;
+        };
+        combo_bt_layer {
+            timeout-ms = <50>;
+            key-positions = <3 4 5>;
+            bindings = <&tog 4>;
+        };
+    };
+    behaviors {
+        ht_0 : hold_tap_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_0";
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
     };
 };
