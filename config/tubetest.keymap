@@ -6,7 +6,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        BASE {
             display-name = "Base";
             bindings = <
                 &ht_0 3 N5       &kp UP    &ht_0 2 N0
@@ -14,7 +14,7 @@
             >;
         };
 
-        bt_layer {
+        BLUETOOTH {
             display-name = "Bluetooth";
             bindings = <
                 &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2
@@ -22,7 +22,7 @@
             >;
         };
 
-        num0_layer {
+        NUM0 {
             display-name = "Num0";
             bindings = <
                 &kp N0       &kp N1   &trans
@@ -30,7 +30,7 @@
             >;               
         };
 
-        num5_layer {
+        NUM5 {
             display-name = "Num5";
             bindings = <
                 &trans   &kp N5   &kp N6
@@ -41,8 +41,8 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-                &trans  &C_BRI_DN   &C_BRI_UP
-                &C_MUTE &C_VOL_DN   &C_VOL_UP 
+                &trans  &kp C_BRI_DN   &kp C_BRI_UP
+                &kp C_MUTE &kp C_VOL_DN   &kp C_VOL_UP 
             >;               
         };   
     };
@@ -100,7 +100,7 @@
             key-positions = <0 1 5>;
             bindings = <&tog 1>;
         };
-        combo_bt_layer {
+        combo_MEDIA {
             timeout-ms = <50>;
             key-positions = <3 4 5>;
             bindings = <&tog 4>;
