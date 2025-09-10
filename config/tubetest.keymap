@@ -107,7 +107,7 @@
         };
     };
     behaviors {
-        ht_0 : hold_tap_0 {
+        ht_0: hold_tap_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_0";
             #binding-cells = <2>;
