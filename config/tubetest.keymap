@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -41,26 +43,26 @@
         };   
 
         MOUSE1 {
-            display-name = "MOUSE1 (Slow)";
+            display-name = "MOUSE1";
             bindings = <
-                &scroll_left_slow   &move_up_slow     &scroll_right_slow
-                &move_left_slow     &move_down_slow   &move_right_slow 
+                &msc -20 0  &mmv 0 -20  &msc 20 0
+                &mmv -20 0  &mmv 0 20   &mmv 20 0 
             >;               
         };  
 
         MOUSE2 {
-            display-name = "MOUSE2 (Medium)";
+            display-name = "MOUSE2";
             bindings = <
-                &scroll_left_med    &move_up_med      &scroll_right_med
-                &move_left_med      &move_down_med    &move_right_med 
+                &msc -50 0  &mmv 0 -50  &msc 50 0
+                &mmv -50 0  &mmv 0 50   &mmv 50 0 
             >;               
         }; 
 
         MOUSE3 {
-            display-name = "MOUSE3 (Fast)";
+            display-name = "MOUSE3";
             bindings = <
-                &scroll_left_fast   &move_up_fast     &scroll_right_fast
-                &move_left_fast     &move_down_fast   &move_right_fast 
+                &msc -150 0  &mmv 0 -150  &msc 150 0
+                &mmv -150 0  &mmv 0 150   &mmv 150 0 
             >;               
         }; 
 
@@ -142,7 +144,6 @@
             bindings = <&tog 6>;
         };
     };
-
     behaviors {
         ht_0: hold_tap_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -154,178 +155,5 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // Custom Mouse Movement Behaviors - Slow Speed (Level 1)
-        move_up_slow: move_up_slow {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_UP_SLOW";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <(-600)>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <1>;
-        };
-
-        move_down_slow: move_down_slow {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_DOWN_SLOW";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <600>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <1>;
-        };
-
-        move_left_slow: move_left_slow {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_LEFT_SLOW";
-            #binding-cells = <0>;
-            move-x = <(-600)>;
-            move-y = <0>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <1>;
-        };
-
-        move_right_slow: move_right_slow {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_RIGHT_SLOW";
-            #binding-cells = <0>;
-            move-x = <600>;
-            move-y = <0>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <1>;
-        };
-
-        // Custom Mouse Movement Behaviors - Medium Speed (Level 2)
-        move_up_med: move_up_med {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_UP_MED";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <(-1200)>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-        };
-
-        move_down_med: move_down_med {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_DOWN_MED";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <1200>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-        };
-
-        move_left_med: move_left_med {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_LEFT_MED";
-            #binding-cells = <0>;
-            move-x = <(-1200)>;
-            move-y = <0>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-        };
-
-        move_right_med: move_right_med {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_RIGHT_MED";
-            #binding-cells = <0>;
-            move-x = <1200>;
-            move-y = <0>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-        };
-
-        // Custom Mouse Movement Behaviors - Fast Speed (Level 3)
-        move_up_fast: move_up_fast {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_UP_FAST";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <(-2400)>;
-            time-to-max-speed-ms = <100>;
-            acceleration-exponent = <2>;
-        };
-
-        move_down_fast: move_down_fast {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_DOWN_FAST";
-            #binding-cells = <0>;
-            move-x = <0>;
-            move-y = <2400>;
-            time-to-max-speed-ms = <100>;
-            acceleration-exponent = <2>;
-        };
-
-        move_left_fast: move_left_fast {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_LEFT_FAST";
-            #binding-cells = <0>;
-            move-x = <(-2400)>;
-            move-y = <0>;
-            time-to-max-speed-ms = <100>;
-            acceleration-exponent = <2>;
-        };
-
-        move_right_fast: move_right_fast {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_RIGHT_FAST";
-            #binding-cells = <0>;
-            move-x = <2400>;
-            move-y = <0>;
-            time-to-max-speed-ms = <100>;
-            acceleration-exponent = <2>;
-        };
-
-        // Custom Mouse Scroll Behaviors - Slow Speed (Level 1)
-        scroll_left_slow: scroll_left_slow {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_LEFT_SLOW";
-            #binding-cells = <0>;
-            scroll-x = <(-20)>;
-            scroll-y = <0>;
-        };
-
-        scroll_right_slow: scroll_right_slow {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_RIGHT_SLOW";
-            #binding-cells = <0>;
-            scroll-x = <20>;
-            scroll-y = <0>;
-        };
-
-        // Custom Mouse Scroll Behaviors - Medium Speed (Level 2)
-        scroll_left_med: scroll_left_med {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_LEFT_MED";
-            #binding-cells = <0>;
-            scroll-x = <(-50)>;
-            scroll-y = <0>;
-        };
-
-        scroll_right_med: scroll_right_med {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_RIGHT_MED";
-            #binding-cells = <0>;
-            scroll-x = <50>;
-            scroll-y = <0>;
-        };
-
-        // Custom Mouse Scroll Behaviors - Fast Speed (Level 3)
-        scroll_left_fast: scroll_left_fast {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_LEFT_FAST";
-            #binding-cells = <0>;
-            scroll-x = <(-150)>;
-            scroll-y = <0>;
-        };
-
-        scroll_right_fast: scroll_right_fast {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_RIGHT_FAST";
-            #binding-cells = <0>;
-            scroll-x = <150>;
-            scroll-y = <0>;
-        };
     };
 };
