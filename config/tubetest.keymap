@@ -76,10 +76,20 @@
             key-positions = <0 1 5>;
             bindings = <&tog 1>;
         };
-         combo_soft_off {
+         combo_C {
             timeout-ms = <50>;
-            key-positions = <1 2 3>;
-            bindings = <&soft_off>;
+            key-positions = <1 4>;
+            bindings = <&kp C>;
+        };   
+         combo_ctl_left {
+            timeout-ms = <50>;
+            key-positions = <0 3>;
+            bindings = <&kp LC(LEFT)>;
+        };   
+         combo_ctl_right {
+            timeout-ms = <50>;
+            key-positions = <2 5>;
+            bindings = <&kp LC(RIGHT)>;
         };   
     };
 };
