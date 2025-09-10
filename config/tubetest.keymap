@@ -39,7 +39,7 @@
         };   
 
         MOUSE1 {
-            display-name = "Num5";
+            display-name = "MOUSE1";
             bindings = <
                 &msc -20 0  &mmv 0 -20  &msc 20 0
                 &mmv -20 0  &mmv 0 20   &mmv 20 0 
@@ -47,7 +47,7 @@
         };  
 
         MOUSE2 {
-            display-name = "Num5";
+            display-name = "MOUSE2";
             bindings = <
                 &msc -50 0  &mmv 0 -50  &msc 50 0
                 &mmv -50 0  &mmv 0 50   &mmv 50 0 
@@ -55,7 +55,7 @@
         }; 
 
         MOUSE3 {
-            display-name = "Num5";
+            display-name = "MOUSE3";
             bindings = <
                 &msc -150 0  &mmv 0 -150  &msc 150 0
                 &mmv -150 0  &mmv 0 150   &mmv 150 0 
