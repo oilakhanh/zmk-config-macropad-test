@@ -45,24 +45,24 @@
         MOUSE1 {
             display-name = "MOUSE1";
             bindings = <
-                &msc -20 0  &mmv 0 -20  &msc 20 0
-                &mmv -20 0  &mmv 0 20   &mmv 20 0 
-            >;               
+                &msc MOVE_Y(-500)    &mmv MOVE_Y(-500)    &msc MOVE_Y(500)
+                &mmv MOVE_X(-500) &mmv MOVE_Y(500)     &mmv MOVE_X(500)
+            >;              
         };  
 
         MOUSE2 {
-            display-name = "MOUSE2";
+            display-name = "MOUSE2 (Medium)";
             bindings = <
-                &msc -50 0  &mmv 0 -50  &msc 50 0
-                &mmv -50 0  &mmv 0 50   &mmv 50 0 
+                &msc MOVE_X(-1200)    &mmv MOVE_Y(-1200)   &msc MOVE_X(1200)
+                &mmv MOVE_X(-1200) &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)
             >;               
         }; 
 
         MOUSE3 {
-            display-name = "MOUSE3";
+            display-name = "MOUSE3 (Fast)";
             bindings = <
-                &msc -150 0  &mmv 0 -150  &msc 150 0
-                &mmv -150 0  &mmv 0 150   &mmv 150 0 
+                &msc SCRL_UP    &mmv MOVE_Y(-2500)   &msc SCRL_DOWN
+                &mmv MOVE_X(-2500) &mmv MOVE_Y(2500)   &mmv MOVE_X(2500)
             >;               
         }; 
 
