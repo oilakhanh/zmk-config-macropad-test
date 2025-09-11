@@ -61,8 +61,8 @@
         MOUSE3 {
             display-name = "MOUSE3 (Fast)";
             bindings = <
-                &msc MOVE_Y(150) &msc MOVE_X(-10)    &msc MOVE_X(-20)
-                &msc MOVE_Y(-150)  &msc MOVE_X(10)     &msc MOVE_X(20)
+                &msc MOVE_Y(150) &msc MOVE_X(-20)    &msc MOVE_X(-50)
+                &msc MOVE_Y(-150)  &msc MOVE_X(20)     &msc MOVE_X(50)
             >;               
         }; 
 
