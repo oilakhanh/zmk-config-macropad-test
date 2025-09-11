@@ -45,7 +45,7 @@
         MOUSE1 {
             display-name = "MOUSE1";
             bindings = <
-                &msc MOVE_Y(10)    &mmv MOVE_Y(-250)    &msc MOVE_Y(-10)
+                &msc MOVE_Y(20)    &mmv MOVE_Y(-250)    &msc MOVE_Y(-20)
                 &mmv MOVE_X(-250) &mmv MOVE_Y(250)     &mmv MOVE_X(250)
             >;              
         };  
@@ -53,7 +53,7 @@
         MOUSE2 {
             display-name = "MOUSE2 (Medium)";
             bindings = <
-                &msc MOVE_Y(20)    &mmv MOVE_Y(-1000)   &msc MOVE_Y(-20)
+                &msc MOVE_Y(50)    &mmv MOVE_Y(-1000)   &msc MOVE_Y(-50)
                 &mmv MOVE_X(-1000) &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)
             >;               
         }; 
