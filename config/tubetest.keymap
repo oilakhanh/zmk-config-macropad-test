@@ -13,64 +13,40 @@
         BASE {
             display-name = "Base";
             bindings = <
-                &ht_0 3 N5       &kp UP    &ht_0 2 N0
-                &kp LEFT   &kp DOWN   &kp RIGHT
+                &ht_0 3 N5  &kp UP      &ht_0 2 N0
+                &kp LEFT    &kp DOWN    &kp RIGHT
             >;
         };
 
         BLUETOOTH {
             display-name = "Bluetooth";
             bindings = <
-                &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2
-                &bt BT_CLR          &bootloader        &none
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
+                &bt BT_CLR      &bootloader     &none
             >;
         };
 
         NUM0 {
             display-name = "Num0";
             bindings = <
-                &kp N1       &kp N2   &trans
-                &kp N3       &kp N4   &kp N0 
+                &kp N1  &kp N2  &trans
+                &kp N3  &kp N4  &kp N0 
             >;               
         };
 
         NUM5 {
             display-name = "Num5";
             bindings = <
-                &trans   &kp N6   &kp N7
-                &kp N5   &kp N8   &kp N9 
+                &trans  &kp N6  &kp N7
+                &kp N5  &kp N8  &kp N9 
             >;               
         };   
-
-        MOUSE1 {
-            display-name = "MOUSE1";
-            bindings = <
-                &msc MOVE_Y(20)    &mmv MOVE_Y(-250)    &msc MOVE_Y(-20)
-                &mmv MOVE_X(-250) &mmv MOVE_Y(250)     &mmv MOVE_X(250)
-            >;              
-        };  
-
-        MOUSE2 {
-            display-name = "MOUSE2 (Medium)";
-            bindings = <
-                &msc MOVE_Y(50)    &mmv MOVE_Y(-1000)   &msc MOVE_Y(-50)
-                &mmv MOVE_X(-1000) &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)
-            >;               
-        }; 
-
-        MOUSE3 {
-            display-name = "MOUSE3 (Fast)";
-            bindings = <
-                &msc MOVE_Y(150) &msc MOVE_X(-20)    &msc MOVE_X(-50)
-                &msc MOVE_Y(-150)  &msc MOVE_X(20)     &msc MOVE_X(50)
-            >;               
-        }; 
 
         MEDIA {
             display-name = "Media";
             bindings = <
-                &trans  &kp C_BRI_DN   &kp C_BRI_UP
-                &kp C_MUTE &kp C_VOL_DN   &kp C_VOL_UP 
+                &kp I   &kp T   &to 0  
+                &kp F13 &kp F14 &kp F15
             >;               
         };   
     };
@@ -112,36 +88,31 @@
             key-positions = <1 4>;
             bindings = <&kp C>;
         };   
-        combo_ctl_left {
+        combo_M {
             timeout-ms = <50>;
             key-positions = <0 3>;
-            bindings = <&kp LC(LEFT)>;
+            bindings = <&kp M>;
         };   
-        combo_ctl_right {
+        combo_ESC {
             timeout-ms = <50>;
             key-positions = <2 5>;
-            bindings = <&kp LC(RIGHT)>;
+            bindings = <&kp ESC>;
         }; 
 
-        combo_bt_layer {
-            timeout-ms = <50>;
-            key-positions = <0 1 5>;
-            bindings = <&tog 1>;
-        };
-        combo_MOUSE1 {
+        combo_BLUETOOTH {
             timeout-ms = <50>;
             key-positions = <0 1 2>;
-            bindings = <&tog 4>;
+            bindings = <&tog 1>;
         };
-        combo_MOUSE2 {
+        combo_MEDIA {
             timeout-ms = <50>;
             key-positions = <3 4 5>;
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
         };
-        combo_MOUSE3 {
+        combo_BASE {
             timeout-ms = <50>;
-            key-positions = <3 1 5>;
-            bindings = <&tog 6>;
+            key-positions = <0 1 5>;
+            bindings = <&to 0>;
         };
     };
     behaviors {
